@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="paneCadPessoas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Visao.controle.PessoaControle">
+   <children>
+      <Label fx:id="lbcadpessoas" alignment="CENTER" layoutX="213.0" layoutY="24.0" prefHeight="27.0" prefWidth="220.0" text="Cadastro de Pessoas">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="53.0" prefHeight="3.0" prefWidth="614.0" />
+      <Label fx:id="lbNome" layoutX="12.0" layoutY="68.0" text="Nome:*" />
+      <TextField fx:id="txtNome" layoutX="11.0" layoutY="90.0" prefHeight="25.0" prefWidth="368.0" promptText="Digite o nome aqui..." />
+      <Label fx:id="lbCPF" layoutX="390.0" layoutY="68.0" text="CPF:*" />
+      <TextField fx:id="txtCPF" layoutX="390.0" layoutY="90.0" prefHeight="25.0" prefWidth="234.0" promptText="Digite o cpf..." />
+      <Label fx:id="lbEndereco" layoutX="12.0" layoutY="125.0" text="Endereço:*" />
+      <TextField fx:id="txtEndereco" layoutX="11.0" layoutY="147.0" prefHeight="25.0" prefWidth="368.0" promptText="Digite o endereço..." />
+      <Label fx:id="lbTelefone" layoutX="391.0" layoutY="125.0" text="Telefone:*" />
+      <TextField fx:id="txtTelefone" layoutX="390.0" layoutY="147.0" prefHeight="25.0" prefWidth="234.0" promptText="Digite o telefone..." />
+      <Label fx:id="lbEmail" layoutX="12.0" layoutY="182.0" text="Email:*" />
+      <TextField fx:id="txtEmail" layoutX="11.0" layoutY="204.0" prefHeight="25.0" prefWidth="368.0" promptText="Digite o email..." />
+      <Label fx:id="lbSenha" layoutX="391.0" layoutY="182.0" text="Senha:*" />
+      <TextField fx:id="txtSenha" layoutX="390.0" layoutY="204.0" prefHeight="25.0" prefWidth="234.0" promptText="Digite uma senha..." />
+      <Button fx:id="btnSalvar" layoutX="461.0" layoutY="314.0" mnemonicParsing="false" onAction="#salvar" prefHeight="38.0" prefWidth="75.0" text="Salvar" />
+      <Button fx:id="btnCancelar" layoutX="546.0" layoutY="314.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="75.0" text="Cancelar" />
+      <Separator layoutX="11.0" layoutY="420.0" prefHeight="3.0" prefWidth="614.0" />
+   </children>
+</Pane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="paneLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Visao.controle.LoginControle">
+   <children>
+      <Label alignment="CENTER" layoutX="208.0" layoutY="20.0" prefHeight="27.0" prefWidth="220.0" text="Gyn Moto Car">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="53.0" prefHeight="3.0" prefWidth="614.0" />
+      <Label fx:id="lbLogin" layoutX="227.0" layoutY="209.0" text="Login:" />
+      <TextField fx:id="txtLogin" layoutX="268.0" layoutY="205.0" onMouseClicked="#limpar" />
+      <Label fx:id="lbSenha" layoutX="223.0" layoutY="239.0" text="Senha:" />
+      <PasswordField fx:id="pswSenha" layoutX="268.0" layoutY="235.0" />
+      <Button fx:id="btnLogin" layoutX="358.0" layoutY="273.0" mnemonicParsing="false" onAction="#logar" prefHeight="27.0" prefWidth="57.0" text="login" />
+      <Separator layoutX="11.0" layoutY="457.0" prefHeight="3.0" prefWidth="614.0" />
+      <Hyperlink fx:id="hplCadastro" layoutX="541.0" layoutY="56.0" onAction="#criarCadastro" text="Criar Cadastro" />
+      <Hyperlink fx:id="hplEsqueciSenha" layoutX="218.0" layoutY="275.0" onAction="#esqueciSenha" text="Esqueci minha senha" />
+   </children>
+</Pane>

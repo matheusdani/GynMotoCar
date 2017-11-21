@@ -1,0 +1,446 @@
+!SESSION 2017-11-02 15:27:59.183 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.committers.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.committers.product
+
+!ENTRY org.eclipse.ui.monitoring 2 0 2017-11-02 15:28:51.103
+!MESSAGE UI freeze of 0,59s at 15:28:50.477
+!SUBENTRY 1 org.eclipse.ui.monitoring 1 0 2017-11-02 15:28:51.103
+!MESSAGE Sample at 15:28:50.975 (+0,498s)
+Thread 'main' tid=1 (RUNNABLE)
+!STACK 0
+java.lang.Exception: Stack Trace
+	at org.eclipse.swt.internal.ole.win32.COM.VtblCall(Native Method)
+	at org.eclipse.swt.internal.ole.win32.IDispatch.GetIDsOfNames(IDispatch.java:47)
+	at org.eclipse.swt.ole.win32.OleAutomation.getIDsOfNames(OleAutomation.java:403)
+	at org.eclipse.swt.browser.IE.execute(IE.java:1196)
+	at org.eclipse.swt.browser.IE$6.handleEvent(IE.java:390)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1137)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1118)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:822)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:891)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:825)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:891)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:825)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:891)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:825)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:460)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:177)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:272)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:914)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:842)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:837)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:821)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.disposeWidget(ElementReferenceRenderer.java:111)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:914)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:842)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$3.run(PartRenderingEngine.java:837)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:821)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.subscribeTopicToBeRendered(PartRenderingEngine.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.di.internal.extensions.EventObjectSupplier$DIEventHandler.handleEvent(EventObjectSupplier.java:83)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:85)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setToBeRendered(UIElementImpl.java:303)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1302)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.hidePart(PartServiceImpl.java:1236)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.closePart(StackRenderer.java:1278)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.access$4(StackRenderer.java:1260)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$11.close(StackRenderer.java:1145)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1921)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:335)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+!SESSION 2017-11-02 16:29:51.680 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.committers.product -product org.eclipse.epp.package.committers.product -product org.eclipse.epp.package.committers.product -product org.eclipse.epp.package.committers.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.committers.product -product org.eclipse.epp.package.committers.product -product org.eclipse.epp.package.committers.product -data C:\Users\MATHEUS DANIEL\.eclipse\GynMotoCar -product org.eclipse.epp.package.committers.product
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient4 4 0 2017-11-02 16:29:53.602
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient4 [131]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.ecf.provider.filetransfer.httpclient4 [osgi.identity; osgi.identity="org.eclipse.ecf.provider.filetransfer.httpclient4"; type="osgi.bundle"; version:Version="1.1.0.v20151130-0157"; singleton:="true"] because it is exposed to package 'org.apache.http.conn.ssl' from resources org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"] and org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.5.2.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.ecf.provider.filetransfer.httpclient4 [osgi.identity; osgi.identity="org.eclipse.ecf.provider.filetransfer.httpclient4"; type="osgi.bundle"; version:Version="1.1.0.v20151130-0157"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.httpcomponents.httpclient)(&(bundle-version>=4.3.0)(!(bundle-version>=4.4.0))))
+     |
+    provide: osgi.wiring.bundle: org.apache.httpcomponents.httpclient
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+
+Chain 2:
+  org.eclipse.ecf.provider.filetransfer.httpclient4 [osgi.identity; osgi.identity="org.eclipse.ecf.provider.filetransfer.httpclient4"; type="osgi.bundle"; version:Version="1.1.0.v20151130-0157"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.http.impl.client)(version>=4.1.0))
+     |
+    export: osgi.wiring.package: org.apache.http.impl.client; uses:=org.apache.http.conn.ssl
+    export: osgi.wiring.package=org.apache.http.conn.ssl
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.5.2.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.recommenders.apidocs.rcp 4 0 2017-11-02 16:29:53.774
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.apidocs.rcp [373]
+  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models.rcp; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.models.rcp; bundle-version="2.3.0.v20160216-1255"; singleton:="true"
+       org.eclipse.recommenders.models.rcp [387]
+         Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+           -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+              org.eclipse.recommenders.models [386]
+                Unresolved requirement: Import-Package: org.eclipse.aether.transport.http; version="[1.0.0,1.1.0)"
+                  -> Export-Package: org.eclipse.aether.transport.http; bundle-symbolic-name="org.eclipse.aether.transport.http"; bundle-version="1.0.1.v20141111"; version="1.0.1.v20141111"; uses:="javax.inject,org.eclipse.aether,org.eclipse.aether.repository,org.eclipse.aether.spi.connector.transport,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log,org.eclipse.aether.transfer"
+                     org.eclipse.aether.transport.http [65]
+                       No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.apidocs; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.apidocs; bundle-version="2.3.0.v20160216-1255"
+       org.eclipse.recommenders.apidocs [372]
+         Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+           -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"] because it is exposed to package 'org.apache.http' from resources org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"] and org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package: org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"]
+
+Chain 2:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http.auth)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.http.auth; uses:=org.apache.http.protocol
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+    import: (&(osgi.wiring.package=org.apache.http.protocol)(version>=4.3.3))
+     |
+    export: osgi.wiring.package: org.apache.http.protocol; uses:=org.apache.http
+    export: osgi.wiring.package=org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.recommenders.models 4 0 2017-11-02 16:29:53.789
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.models [386]
+  Unresolved requirement: Import-Package: org.eclipse.aether.transport.http; version="[1.0.0,1.1.0)"
+    -> Export-Package: org.eclipse.aether.transport.http; bundle-symbolic-name="org.eclipse.aether.transport.http"; bundle-version="1.0.1.v20141111"; version="1.0.1.v20141111"; uses:="javax.inject,org.eclipse.aether,org.eclipse.aether.repository,org.eclipse.aether.spi.connector.transport,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log,org.eclipse.aether.transfer"
+       org.eclipse.aether.transport.http [65]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"] because it is exposed to package 'org.apache.http' from resources org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"] and org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package: org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"]
+
+Chain 2:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http.auth)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.http.auth; uses:=org.apache.http.protocol
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+    import: (&(osgi.wiring.package=org.apache.http.protocol)(version>=4.3.3))
+     |
+    export: osgi.wiring.package: org.apache.http.protocol; uses:=org.apache.http
+    export: osgi.wiring.package=org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.recommenders.snipmatch.rcp 4 0 2017-11-02 16:29:53.946
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.snipmatch.rcp [394]
+  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models.rcp; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.models.rcp; bundle-version="2.3.0.v20160216-1255"; singleton:="true"
+       org.eclipse.recommenders.models.rcp [387]
+         Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+           -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+              org.eclipse.recommenders.models [386]
+                Unresolved requirement: Import-Package: org.eclipse.aether.transport.http; version="[1.0.0,1.1.0)"
+                  -> Export-Package: org.eclipse.aether.transport.http; bundle-symbolic-name="org.eclipse.aether.transport.http"; bundle-version="1.0.1.v20141111"; version="1.0.1.v20141111"; uses:="javax.inject,org.eclipse.aether,org.eclipse.aether.repository,org.eclipse.aether.spi.connector.transport,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log,org.eclipse.aether.transfer"
+                     org.eclipse.aether.transport.http [65]
+                       No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"] because it is exposed to package 'org.apache.http' from resources org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"] and org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package: org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"]
+
+Chain 2:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http.auth)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.http.auth; uses:=org.apache.http.protocol
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+    import: (&(osgi.wiring.package=org.apache.http.protocol)(version>=4.3.3))
+     |
+    export: osgi.wiring.package: org.apache.http.protocol; uses:=org.apache.http
+    export: osgi.wiring.package=org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SESSION 2017-11-02 18:52:56.822 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.committers.product -product org.eclipse.epp.package.committers.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.committers.product -data C:\Users\MATHEUS DANIEL\.eclipse\GynMotoCar -product org.eclipse.epp.package.committers.product
+
+!ENTRY org.eclipse.ecf.provider.filetransfer.httpclient4 4 0 2017-11-02 18:52:58.713
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.provider.filetransfer.httpclient4 [131]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.ecf.provider.filetransfer.httpclient4 [osgi.identity; osgi.identity="org.eclipse.ecf.provider.filetransfer.httpclient4"; type="osgi.bundle"; version:Version="1.1.0.v20151130-0157"; singleton:="true"] because it is exposed to package 'org.apache.http.conn.ssl' from resources org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"] and org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.5.2.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.ecf.provider.filetransfer.httpclient4 [osgi.identity; osgi.identity="org.eclipse.ecf.provider.filetransfer.httpclient4"; type="osgi.bundle"; version:Version="1.1.0.v20151130-0157"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.apache.httpcomponents.httpclient)(&(bundle-version>=4.3.0)(!(bundle-version>=4.4.0))))
+     |
+    provide: osgi.wiring.bundle: org.apache.httpcomponents.httpclient
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+
+Chain 2:
+  org.eclipse.ecf.provider.filetransfer.httpclient4 [osgi.identity; osgi.identity="org.eclipse.ecf.provider.filetransfer.httpclient4"; type="osgi.bundle"; version:Version="1.1.0.v20151130-0157"; singleton:="true"]
+    import: (&(osgi.wiring.package=org.apache.http.impl.client)(version>=4.1.0))
+     |
+    export: osgi.wiring.package: org.apache.http.impl.client; uses:=org.apache.http.conn.ssl
+    export: osgi.wiring.package=org.apache.http.conn.ssl
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.5.2.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.recommenders.apidocs.rcp 4 0 2017-11-02 18:52:58.869
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.apidocs.rcp [373]
+  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models.rcp; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.models.rcp; bundle-version="2.3.0.v20160216-1255"; singleton:="true"
+       org.eclipse.recommenders.models.rcp [387]
+         Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+           -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+              org.eclipse.recommenders.models [386]
+                Unresolved requirement: Import-Package: org.eclipse.aether.transport.http; version="[1.0.0,1.1.0)"
+                  -> Export-Package: org.eclipse.aether.transport.http; bundle-symbolic-name="org.eclipse.aether.transport.http"; bundle-version="1.0.1.v20141111"; version="1.0.1.v20141111"; uses:="javax.inject,org.eclipse.aether,org.eclipse.aether.repository,org.eclipse.aether.spi.connector.transport,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log,org.eclipse.aether.transfer"
+                     org.eclipse.aether.transport.http [65]
+                       No resolution report for the bundle.  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.apidocs; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.apidocs; bundle-version="2.3.0.v20160216-1255"
+       org.eclipse.recommenders.apidocs [372]
+         Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+           -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"] because it is exposed to package 'org.apache.http' from resources org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"] and org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package: org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"]
+
+Chain 2:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http.auth)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.http.auth; uses:=org.apache.http.protocol
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+    import: (&(osgi.wiring.package=org.apache.http.protocol)(version>=4.3.3))
+     |
+    export: osgi.wiring.package: org.apache.http.protocol; uses:=org.apache.http
+    export: osgi.wiring.package=org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.recommenders.models 4 0 2017-11-02 18:52:58.885
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.models [386]
+  Unresolved requirement: Import-Package: org.eclipse.aether.transport.http; version="[1.0.0,1.1.0)"
+    -> Export-Package: org.eclipse.aether.transport.http; bundle-symbolic-name="org.eclipse.aether.transport.http"; bundle-version="1.0.1.v20141111"; version="1.0.1.v20141111"; uses:="javax.inject,org.eclipse.aether,org.eclipse.aether.repository,org.eclipse.aether.spi.connector.transport,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log,org.eclipse.aether.transfer"
+       org.eclipse.aether.transport.http [65]
+         No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"] because it is exposed to package 'org.apache.http' from resources org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"] and org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package: org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"]
+
+Chain 2:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http.auth)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.http.auth; uses:=org.apache.http.protocol
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+    import: (&(osgi.wiring.package=org.apache.http.protocol)(version>=4.3.3))
+     |
+    export: osgi.wiring.package: org.apache.http.protocol; uses:=org.apache.http
+    export: osgi.wiring.package=org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.recommenders.snipmatch.rcp 4 0 2017-11-02 18:52:59.057
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.recommenders.snipmatch.rcp [394]
+  Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models.rcp; bundle-version="[2.3.0,2.3.1)"
+    -> Bundle-SymbolicName: org.eclipse.recommenders.models.rcp; bundle-version="2.3.0.v20160216-1255"; singleton:="true"
+       org.eclipse.recommenders.models.rcp [387]
+         Unresolved requirement: Require-Bundle: org.eclipse.recommenders.models; bundle-version="[2.3.0,2.3.1)"
+           -> Bundle-SymbolicName: org.eclipse.recommenders.models; bundle-version="2.3.0.v20160216-1255"
+              org.eclipse.recommenders.models [386]
+                Unresolved requirement: Import-Package: org.eclipse.aether.transport.http; version="[1.0.0,1.1.0)"
+                  -> Export-Package: org.eclipse.aether.transport.http; bundle-symbolic-name="org.eclipse.aether.transport.http"; bundle-version="1.0.1.v20141111"; version="1.0.1.v20141111"; uses:="javax.inject,org.eclipse.aether,org.eclipse.aether.repository,org.eclipse.aether.spi.connector.transport,org.eclipse.aether.spi.locator,org.eclipse.aether.spi.log,org.eclipse.aether.transfer"
+                     org.eclipse.aether.transport.http [65]
+                       No resolution report for the bundle.  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"] because it is exposed to package 'org.apache.http' from resources org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"] and org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package: org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.3.3.v201411290715"]
+
+Chain 2:
+  org.eclipse.aether.transport.http [osgi.identity; osgi.identity="org.eclipse.aether.transport.http"; type="osgi.bundle"; version:Version="1.0.1.v20141111"]
+    import: (&(osgi.wiring.package=org.apache.http.auth)(&(version>=4.2.1)(!(version>=4.4.0))))
+     |
+    export: osgi.wiring.package=org.apache.http.auth; uses:=org.apache.http.protocol
+  org.apache.httpcomponents.httpclient [osgi.identity; osgi.identity="org.apache.httpcomponents.httpclient"; type="osgi.bundle"; version:Version="4.3.6.v201411290715"]
+    import: (&(osgi.wiring.package=org.apache.http.protocol)(version>=4.3.3))
+     |
+    export: osgi.wiring.package: org.apache.http.protocol; uses:=org.apache.http
+    export: osgi.wiring.package=org.apache.http
+  org.apache.httpcomponents.httpcore [osgi.identity; osgi.identity="org.apache.httpcomponents.httpcore"; type="osgi.bundle"; version:Version="4.4.6.v20170210-0925"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SESSION 2017-11-04 11:22:44.088 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_73
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.committers.product -product org.eclipse.epp.package.committers.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.committers.product -data C:\Users\MATHEUS DANIEL\.eclipse\GynMotoCar -product org.eclipse.epp.package.committers.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-04 11:23:07.323
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\MATHEUS DANIEL'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
