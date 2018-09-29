@@ -1,19 +1,14 @@
 package Dao;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
-import Modelo.dominio.Usuario;
+import modelo.dominio.Usuario;
 import daoUtil.ConnectionFactory;
 
 public class LoginDao {
 
 	private java.sql.Statement statement;
-	private PreparedStatement preparedStatement;
 	private Connection con = null;
 	Usuario usuario = new Usuario();
 	public LoginDao() {
@@ -22,7 +17,6 @@ public class LoginDao {
 	}
 	public Usuario buscarUser(String email)  {
 
-		List<Usuario> listaUsers = new ArrayList<Usuario>();
 		ResultSet res = null;
 
 		try {
@@ -40,7 +34,7 @@ public class LoginDao {
 				}
 			}
 		} catch (SQLException e) {
-			System.out.println("Erro na consulta1:" + e.getMessage());
+			System.out.println("Erro na consulta:" + e.getMessage());
 		}
 		return usuario;
 	}

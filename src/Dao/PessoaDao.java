@@ -3,18 +3,20 @@ package Dao;
 import java.beans.Statement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import Modelo.dominio.Pessoa;
+import java.util.ArrayList;
+import java.util.List;
+import modelo.dominio.Pessoa;
 import daoUtil.ConnectionFactory;
 
-public class UsuarioDao {
+public class PessoaDao {
 
 	private Statement statement;
 	private PreparedStatement preparedStatement;
 	private Connection con = null;
 
-	public UsuarioDao() {
+	public PessoaDao() {
 		ConnectionFactory factory = new ConnectionFactory();
 		con = factory.getConnection();
 	}
@@ -63,36 +65,32 @@ public class UsuarioDao {
 
 		return salvo;
 	}
-
-	public List<Evento> listarEventos() throws SQLException{
-		List<Evento> listaDeEventos = new ArrayList<Evento>();
+	
+	public List<Pessoa> listarPessoas() throws SQLException{
+		List<Pessoa> listaDePessoas = new ArrayList<Pessoa>();
 		ResultSet res = null;
 		String sqlListar = "SELECT * FROM EVENTO";
 		try {
 			preparedStatement = con.prepareStatement(sqlListar);
 			res = preparedStatement.executeQuery();
 			while (res.next()) {
-				Evento evento = new Evento();
-				evento.setId(res.getInt("id"));
-				evento.setNome(res.getString("nome"));
-				evento.setDataEvento(res.getDate("dataEvento"));
-				evento.setStatus(res.getString("statusEvento"));
-				evento.setVagas(res.getInt("vagas"));
-				evento.setValorIngresso(res.getDouble("valorIngresso"));
-				evento.setLocal(res.getString("localEvento"));
-				evento.setCategoria(res.getString("categoria"));
+				
+				Pessoa pessoa = new Pessoa();
+				pessoa.setId(res.getInt("id"));
+				pessoa.setNome(res.getString("nome"));
+				pessoa.setCPF(res.getString("CPF"));
+				pessoa.setEndereco(res.getString("CPF"));
+				pessoa.setTelefone(res.getString("telefone"));
+				pessoa.setEmail(res.getString("email"));
+				pessoa.setSenha(res.getString("senha"));
 
-				listaDeEventos.add(evento);
+				listaDePessoas.add(pessoa);
 			}
 
 
 		}catch (SQLException e){
 			System.out.println("Erro na consulta1:" + e.getMessage());
 		}
-		return listaDeEventos;
+		return listaDePessoas;
 	}
-
-}
-
-
 }

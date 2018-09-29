@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="paneInserirAnun" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visao.controle.AnuncioControle">
+   <children>
+      <Label fx:id="lbanuncio" alignment="CENTER" layoutX="290.0" layoutY="20.0" prefHeight="27.0" prefWidth="220.0" text="Inserir anuncio">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="11.0" layoutY="56.0" prefHeight="3.0" prefWidth="778.0" />
+      <Label fx:id="lbdescricao" layoutX="63.0" layoutY="114.0" text="Descrição:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtdescricao" layoutX="63.0" layoutY="137.0" prefHeight="25.0" prefWidth="368.0" promptText="Digite uma Descrição..." />
+      <Label fx:id="lbmodelo" layoutX="63.0" layoutY="164.0" text="Modelo:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtmodelo" layoutX="63.0" layoutY="187.0" prefHeight="25.0" prefWidth="220.0" promptText="Digite um Modelo..." />
+      <Label fx:id="lbmarca" layoutX="63.0" layoutY="214.0" text="Marca:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtmarca" layoutX="63.0" layoutY="237.0" prefHeight="25.0" prefWidth="220.0" promptText="Digite uma marca..." />
+      <Label fx:id="lbtipo" layoutX="63.0" layoutY="264.0" text="Tipo:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txttipo" layoutX="63.0" layoutY="287.0" prefHeight="25.0" prefWidth="220.0" promptText="Digite um tipo..." />
+      <Label fx:id="lbpotencia" layoutX="63.0" layoutY="314.0" text="Potencia:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtpotencia" layoutX="63.0" layoutY="337.0" prefHeight="25.0" prefWidth="220.0" promptText="Digite uma potecia..." />
+      <Label fx:id="lbvalor" layoutX="63.0" layoutY="382.0" text="Valor:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtvalor" layoutX="63.0" layoutY="406.0" prefHeight="25.0" prefWidth="150.0" promptText="Digite um valor..." />
+      <Label fx:id="lbcombustivel" layoutX="293.0" layoutY="164.0" text="Combustível:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="cbocombustivel" layoutX="293.0" layoutY="187.0" prefHeight="25.0" prefWidth="135.0" promptText="Combustivel" />
+      <Label fx:id="lbano" layoutX="293.0" layoutY="214.0" text="Ano:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="cboano" layoutX="293.0" layoutY="237.0" prefHeight="25.0" prefWidth="82.0" promptText="Ano..." />
+      <Label fx:id="lbcor" layoutX="293.0" layoutY="264.0" text="Cor:*">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="cbocor" layoutX="293.0" layoutY="287.0" prefHeight="25.0" prefWidth="82.0" promptText="Cor..." />
+      <Label fx:id="lbmensagem" layoutX="516.0" layoutY="114.0" text="Mensagem:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtmensagem" alignment="TOP_LEFT" layoutX="516.0" layoutY="137.0" prefHeight="231.0" prefWidth="228.0" promptText="Digite uma mensagem..." />
+      <HBox alignment="CENTER_RIGHT" layoutX="577.0" layoutY="406.0" prefHeight="37.0" prefWidth="165.0">
+         <children>
+            <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#limparInserir" prefHeight="31.0" prefWidth="83.0" text="Limpar">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#salvarAnuncio" prefHeight="25.0" prefWidth="64.0" text="Salvar">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </children>
+      </HBox>
+      <Separator layoutX="11.0" layoutY="511.0" prefHeight="3.0" prefWidth="778.0" />
+   </children>
+</Pane>

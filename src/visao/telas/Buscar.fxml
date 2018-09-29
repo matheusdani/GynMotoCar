@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="paneMenuBusca" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visao.controle.BuscarControle">
+   <children>
+      <MenuBar fx:id="mbbusca" layoutY="-2.0" prefHeight="33.0" prefWidth="800.0">
+        <menus>
+          <Menu fx:id="btnInserirAnun" mnemonicParsing="false" text="Inserir Anuncio">
+               <items>
+                  <MenuItem fx:id="menuAnuncio" mnemonicParsing="false" onAction="#listarAnuncio" text="Anuncio" />
+               </items></Menu>
+          <Menu fx:id="btnMeusAnun" mnemonicParsing="false" text="Meus Anuncios">
+               <items>
+                  <MenuItem fx:id="menuMeusAnuncios" mnemonicParsing="false" onAction="#meusAnuncios" text="Anuncios" />
+               </items></Menu>
+        </menus>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="5.0" right="10.0" top="5.0" />
+         </padding>
+      </MenuBar>
+      <Label alignment="CENTER" layoutX="282.5" layoutY="31.0" prefHeight="40.0" prefWidth="235.0" text="Buscar Anuncios">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbbuscar" layoutX="16.0" layoutY="113.0" text="Buscar:">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtbuscar" layoutX="16.0" layoutY="138.0" prefHeight="25.0" prefWidth="368.0" promptText="Digite um nome para busca..." />
+      <Button fx:id="btnBuscarAnun" layoutX="392.0" layoutY="138.0" mnemonicParsing="false" onAction="#buscarAnuncio" prefHeight="31.0" prefWidth="66.0" text="Buscar">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="290.0" layoutY="243.0" prefHeight="27.0" prefWidth="220.0" text="Lista de Veiculos">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView layoutX="16.0" layoutY="283.0" prefHeight="233.0" prefWidth="765.0">
+        <columns>
+          <TableColumn fx:id="tblNome" prefWidth="288.0" text="Nome" />
+          <TableColumn fx:id="tblAno" minWidth="0.0" prefWidth="97.0" text="Ano" />
+            <TableColumn fx:id="tblCor" minWidth="0.0" prefWidth="97.0" text="Cor" />
+            <TableColumn fx:id="tblValor" minWidth="0.0" prefWidth="122.0" text="Valor" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAbrirAnun" layoutX="714.0" layoutY="529.0" mnemonicParsing="false" onAction="#abrirAnuncio" prefHeight="25.0" prefWidth="66.0" text="Abrir">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Separator layoutX="11.0" layoutY="567.0" prefHeight="3.0" prefWidth="778.0" />
+   </children>
+</Pane>
